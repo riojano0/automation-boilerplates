@@ -14,7 +14,7 @@ Using different languages or framework for automate the same scenarios from http
 ## Boilerplates:
 
 * automation-boilerplate-java
-* PENDING
+* automation-boilerplate-webdriveio
 * PENDING
 * PENDING
 
