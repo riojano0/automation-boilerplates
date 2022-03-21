@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "name": "Debug All wdio Test",
+            "type": "node",
+            "request": "launch",
+            "args": ["./wdio.conf.ts", "--autoCompileOpts.tsNodeOpts.project=", "./tsconfig.json", "--cucumberOpts.name=", "${name}"],
+            "cwd": "${workspaceFolder}",
+            "autoAttachChildProcesses": true,
+            "program": "${workspaceRoot}/node_modules/@wdio/cli/bin/wdio.js",
+            "console": "integratedTerminal",
+            "env": {
+                "DEBUG": "true",
+            },
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "${workspaceFolder}/lib/**/*.js",
+                "<node_internals>/**/*.js"
+            ],
+        },
+        {
+            "name": "Debug with Annotations",
+            "type": "node",
+            "request": "launch",
+            "args": ["./wdio.conf.ts", "--autoCompileOpts.tsNodeOpts.project=", "./tsconfig.json", "--cucumberOpts.tagExpression", "\"@Debug\""],
+            "cwd": "${workspaceFolder}",
+            "autoAttachChildProcesses": true,
+            "program": "${workspaceRoot}/node_modules/@wdio/cli/bin/wdio.js",
+            "console": "integratedTerminal",
+            "env": {
+                "DEBUG": "true",
+            },
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "${workspaceFolder}/lib/**/*.js",
+                "<node_internals>/**/*.js"
+            ],
+        }
+    ]
+}
